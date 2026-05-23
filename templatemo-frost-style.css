@@ -397,7 +397,7 @@ button {
 /* Decorative scoops */
 .hero__deco {
 	position: absolute;
-	right: 10%;
+	right: 200%;
 	top: 50%;
 	transform: translateY(-50%);
 	width: clamp(280px, 35vw, 500px);
