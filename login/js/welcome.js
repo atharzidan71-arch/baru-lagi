@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (user) {
     // Sudah login
     authArea.innerHTML = `
-      <span style="color:white; margin-right:10px;">Halo, ${user}!</span>
+      <span style="color:black; margin-right:10px;">Halo, ${user}!</span>
       <button onclick="logout()" class="btn btn--outline">Logout</button>
     `;
   } else {
