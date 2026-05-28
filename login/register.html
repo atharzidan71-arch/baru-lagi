@@ -1,36 +1,34 @@
 <!DOCTYPE html>
-<!-- Coding By CodingNepal - www.codingnepalweb.com -->
 <html>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Glassmorphism Login Form | CodingNepal</title>
+  <title>Register</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="wrapper">
-    <form action="#">
-      <h2>Login</h2>
-        <div class="input-field">
-        <input type="text" required>
-        <label>Enter your email</label>
+    <form id="registerForm" action="#">
+      <h2>Register</h2>
+      <div class="input-field">
+        <input type="text" id="username" required>
+        <label>Nama Pengguna</label>
       </div>
       <div class="input-field">
-        <input type="password" required>
-        <label>Enter your password</label>
+        <input type="email" id="email" required>
+        <label>Email</label>
       </div>
-      <div class="forget">
-        <label for="remember">
-          <input type="checkbox" id="remember">
-          <p>Remember me</p>
-        </label>
-        <a href="#">Forgot password?</a>
+      <div class="input-field">
+        <input type="password" id="password" required>
+        <label>Password</label>
       </div>
-      <button type="submit">Log In</button>
+      <p id="message"></p>
+      <button type="submit">Daftar</button>
       <div class="register">
-        <p>Don't have an account? <a href="#">Register</a></p>
+        <p>Sudah punya akun? <a href="index.html">Login</a></p>
       </div>
     </form>
   </div>
+  <script src="js/register.js" defer></script>
 </body>
 </html>
