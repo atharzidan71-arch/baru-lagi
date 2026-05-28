@@ -9,14 +9,14 @@
 </head>
 <body>
   <div class="wrapper">
-    <form action="#">
+    <form id="loginForm" action="#">
       <h2>Login</h2>
         <div class="input-field">
-        <input type="text" required>
+        <input type="text" id="username" required>
         <label>Masukan email mu!</label>
       </div>
       <div class="input-field">
-        <input type="password" required>
+        <input type="password" id="password" required>
         <label>Masukan password</label>
       </div>
       <div class="forget">
@@ -30,6 +30,10 @@
       <div class="register">
         <p>Tidak punya akun? <a href="#">daftar</a></p>
       </div>
+
+      <!-- Tambahan alertBox -->
+      <div id="alertBox" class="alert" style="display:none;"></div>
+
     </form>
   </div>
 <script src="js/login.js"></script>
