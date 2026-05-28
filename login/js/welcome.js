@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
   } else {
     // Belum login
     authArea.innerHTML = `
-      <p id="userInfo" style="color:white;">Belum login</p>
+      <p id="userInfo" style="color:black;">Belum login</p>
       <button onclick="goLogin()" class="btn btn--outline">Login</button>
     `;
   }
