@@ -1,25 +1,32 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    function goLogin() {
-        window.location.href = "login/index.html";
-    }
+  function goLogin() {
+    window.location.href = "login/index.html";
+  }
 
-    function logout() {
-        localStorage.removeItem("username");
-        location.reload();
-    }
+  function logout() {
+    localStorage.removeItem("username");
+    location.reload();
+  }
 
-    const user = localStorage.getItem("username");
+  const user = localStorage.getItem("username");
+  const authArea = document.getElementById("authArea");
 
-    if (user) {
-        document.getElementById("userInfo").innerText = "Halo, " + user;
+  if (user) {
+    // Sudah login
+    authArea.innerHTML = `
+      <span style="color:white; margin-right:10px;">Halo, ${user}!</span>
+      <button onclick="logout()" class="btn btn--outline">Logout</button>
+    `;
+  } else {
+    // Belum login
+    authArea.innerHTML = `
+      <p id="userInfo" style="color:white;">Belum login</p>
+      <button onclick="goLogin()" class="btn btn--outline">Login</button>
+    `;
+  }
 
-        document.getElementById("authArea").innerHTML = `
-            <button onclick="logout()" class="nav-cta">Logout</button>
-        `;
-    }
-
-    window.goLogin = goLogin;
-    window.logout = logout;
+  window.goLogin = goLogin;
+  window.logout = logout;
 
 });
